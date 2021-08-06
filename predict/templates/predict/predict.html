@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .main{
+        position: fixed;
+        top: 150px;
+        right: 600px;
+        height: fit-content;
+        background-color: white;
+        border-radius: 10px;
+        align-items: center;
+        padding: 5%;
+    }
+    h1{
+        color: cornflowerblue;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    input[type=submit]{
+        background-color: antiquewhite;
+        margin-top: 10px;
+        border: 2px;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+
+    }
+    input[type=text]{
+        size: 10px;
+
+    }
+</style>
+<div align = 'center' class= 'main'>
+    <h1>Please enter the information:</h1>
+    <form action="result">
+        <table>
+            <tr>
+                <td align="right">Pregnacies:</td>
+                <td align="left"><input type = "text" name="n1"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Glucose:</td>
+                <td align="left"><input type = "text" name="n2"></td>
+            </tr>
+
+
+            <tr>
+                <td align="right">Blood Pressure:</td>
+                <td align="left"><input type = "text" name="n3"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Skin Thickness:</td>
+                <td align="left"><input type = "text" name="n4"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Insulin:</td>
+                <td align="left"><input type = "text" name="n5"></td>
+            </tr>
+
+            <tr>
+                <td align="right">BMI:</td>
+                <td align="left"><input type = "text" name="n6"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Diabetes Pedigree Function:</td>
+                <td align="left"><input type = "text" name="n7"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Age:</td>
+                <td align="left"><input type = "text" name="n8"></td>
+            </tr>
+            
+        </table>
+       
+            <input type="submit">
+    </form>
+    Result:{{result2}}
+
+</div>
+
+{% endblock content %}

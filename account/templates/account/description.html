@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% load static %}
+<style>
+main
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .right-sec
+{
+    padding-right: 50px;
+}
+main .left-sec
+{
+    padding-left: 100px;
+}
+
+.left-sec h2{
+    font-size: 45px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #242424;
+    margin-top: 15px;
+    margin-left: 90px;
+}
+.left-sec h1{
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin: 15px 0;
+    margin-left: 90px;
+}
+.left-sec p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 90px;
+}
+.left-sec button
+{   margin-top: 20px;
+    padding: 15px 45px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    background-image: linear-gradient(to right,#f08686,#ed7272, #f05a5a);
+    border-radius: 10px;
+   
+}
+.right-sec img
+{
+    border-radius: 10px;
+}
+span{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    margin-right: 30px;
+}
+
+</style>
+ 
+    
+
+    <main>
+        <section class="left-sec">
+            <p>
+                Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas,
+                 helps glucose from food get into your cells to be used for energy. 
+                Sometimes your body doesn’t make enough—or any—insulin or doesn’t use insulin well. 
+                Glucose then stays in your blood and doesn’t reach your cells.
+            </p>
+        </section>
+
+        <section class="right-sec">
+            <figure>
+                {% load static %}
+                <img src="{% static 'account/images/img5.jpg' %}">
+            </figure>
+        </section>
+        
+    </main>
+
+    <section class="left-sec">
+        <h2>Different types of Diabetes</h2>
+        <h1>Type 1</h1>
+        <P> If you have type 1 diabetes, your body does not make insulin. 
+            Your immune system attacks and destroys the cells in your pancreas that make insulin. Type 1 diabetes is usually diagnosed in children and young adults, although it can appear at any age. 
+            People with type 1 diabetes need to take insulin every day to stay alive.
+        </P>
+    </section>
+    <section class="left-sec">
+        <h1>Type 2</h1>
+        <P> If you have type 2 diabetes, your body does not make or use insulin well. You can develop type 2 diabetes at any age, even during childhood. However, this type of diabetes occurs most often in middle-aged and older people. Type 2 is the most common type of diabetes.
+        </P>
+    </section>
+
+
+
+{% endblock content %}

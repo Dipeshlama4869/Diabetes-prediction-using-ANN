@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<style>
+    main
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .right-sec
+    {
+        padding-right: 50px;
+    }
+    main .left-sec
+    {
+        padding-left: 100px;
+    }
+
+    .left-sec h2{
+        font-size: 45px;
+        text-transform: capitalize;
+        font-weight: 700;
+        color: #242424;
+        margin-top: 15px;
+    }
+    .left-sec h1{
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 500;
+        margin: 15px 0;
+    }
+    .left-sec p{
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .left-sec button
+    {   margin-top: 20px;
+        padding: 15px 45px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        border: none;
+        background-image: linear-gradient(to right,#f08686,#ed7272, #f05a5a);
+        border-radius: 10px;
+       
+    }
+    .right-sec img
+    {
+        height: 600px;
+        border-radius: 10px;
+    }
+    span{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 300;
+        margin-right: 30px;
+    }
+    
+    </style>
+     
+        
+
+        <main>
+            <section class="left-sec">
+                <h1>In 2015, 8.5% of adults aged 17 years or older had diabetes. In 2013 diabetes was the cause of 1.5 million deaths, and high blood glucose caused 2.3 million deaths worldwide. </h1>
+                <h2>Diabetes</h2>
+                <p>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy. People suffer from Diabetes if their sugar level is high than normal and when their insulin shows abnormal behavior.</p>
+                <button>
+                    <a href="{% url 'description' %}">Explore to know about Diabetes</a>
+                </button>
+            </section>
+
+            <section class="right-sec">
+                <figure>
+                    {% load static %}
+                    <img src="{% static 'account/images/img3.jpg' %}">
+                </figure>
+            </section>
+            
+        </main>
+{% endblock content %}

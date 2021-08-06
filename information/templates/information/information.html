@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mb-3 mt-3">
+    <table class="table table-striped table-bordered mydatatable" style="width: 100%">
+        <thead>
+            <tr>
+                <th>Doctor Name</th>
+                <th>Speciality</th>
+                <th>Hospital</th>
+                <th>Contact Number</th>
+                <th>Location</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dr. Ghanshyam Kharel</td>
+                <td>Neurology</td>
+                <td>Bir Haspital, Greencity Hospital, Metro Kathmandu</td>
+                <td>01-4221988, 01-4381133, 01-4721515</td>
+                <td>Kanti Path, Basundhara, Maharajgunj</td>
+            </tr>
+            <tr>
+                <td>Dr. Kiran Acharya</td>
+                <td>Internal Medicine</td>
+                <td>Shahid Gangalal National Heart Center</td>
+                <td>01-4371322</td>
+                <td>Bansbari</td>
+            </tr>
+            <tr>
+                <td>Dr. Ajay Parajulee</td>
+                <td>General, GI and Laparoscopic Surgeon</td>
+                <td>Greencity Hospital, Blue Cross Hospital, National Hospital & Cancer Research Center, Aloki Care Home & Rehabilitation Center</td>
+                <td>01-4381133, 01-4262027, 01-5551376, 01-5529300</td>
+                <td>Basundhara, Tripureshwor, Jawalakhel, Sanepa-2 Lalitpur</td>
+            </tr>
+            <tr>
+                <td>Dr. Prerana Khadka</td>
+                <td>Physiontherapist</td>
+                <td>Wellness Hospital (Natural Medicine)</td>
+                <td>01-4017787</td>
+                <td>Narayan Gopal Chowk(Opp. Austrailan Embassy)</td>
+            </tr>
+            <tr>
+                <td>Dr. Robin Joshi</td>
+                <td>Urologist</td>
+                <td>Kantipur Hospital, Nepal Cancer Hospital & Research Center Pvt.Ltd, Norvic International Hospital</td>
+                <td>01-4461609, 01-5251312, 01-5970032</td>
+                <td>Subidhanagar Tinkune, Harisiddhi, Thapathali</td>
+            </tr>
+            <tr>
+                <td>Dr. Sameer Aryal</td>
+                <td>Consultant Neurosurgeon</td>
+                <td>Dirghayu Guru Hospital & Research Center Pvt. Ltd., Alka Hospital</td>
+                <td>01-4469979, 01-5455555</td>
+                <td>Mitrapark, Jawalakhel</td>
+            </tr>
+            <tr>
+                <td>Dr. Rekha Sthapit</td>
+                <td>Family Physician, <br>Emergency Medicine</td>
+                <td>Bir Hospital, <br>Civil Hospital</td>
+                <td>01-4221119</td>
+                <td>Kanti Path</td>
+            </tr>
+            <tr>
+                <td>Dr.Bikash Nepal</td>
+                <td>Laparosopic Surgeon</td>
+                <td>Dirghayu Guru Hospital & Research Centre, <br>All Nepal Hospital Pvt. Ltd</td>
+                <td>01-4469979, 01-4389905</td>
+                <td>Mitrapark, <br>Tokha Municipality</td>
+            </tr>
+            <tr>
+                <td>Pradeep Rajbhandari</td>
+                <td>ENT</td>
+                <td>Dhulikhel Hospital</td>
+                <td>01-490639</td>
+                <td>Kathmandu</td>
+            </tr>
+            <tr>
+                <td>Richa Amatya</td>
+                <td>Psychiatry</td>
+                <td>Shree Birendra Hospital, <br>Nepal Mrdiciti Hospital</td>
+                <td>01-4271940, 01-4217766</td>
+                <td>Bhaisepati, <br>Chhauni</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $('.mydatatable').DataTable();
+</script>
+{% endblock content %}

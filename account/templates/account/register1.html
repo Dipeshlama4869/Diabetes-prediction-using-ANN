@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+<head>
+	
+	<title>Header</title>
+	<!-- Required meta tags, makes the page responsive -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'account/style.css' %}">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="user signupBx">
+                <div class="imgBx"><img src="{% static 'account/images/img1.jpg' %}" width="450" height="500"></div>
+                <div class="formBx">
+                    <form method="post">{% csrf_token %}
+                        <h2>Create an account</h2>
+                        <input type="text" name="username" placeholder="Username">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="password" name="password1" placeholder="Password">
+                        <input type="password" name="password2" placeholder="Confirm Password">
+                        <input type="submit" name="" placeholder="Register">
+
+                        <p class="signup">Already have an account?<a href="{% url 'login1' %}"> Login</a></p>
+                        {% for field in registration_form %}
+                        <p>
+                            {% for error in field.errors %}
+                                <p style="color: red;">{{error}}</p>
+                            {% endfor %}
+                        </p>
+                        {% endfor %}
+                    
+                        {% if registration_form.non_field_errors %}
+                            <div style="color: red;">
+                                <p>{{registration_form.non_field_errors}}</p>
+                            </div>
+                        {% endif %}
+                    </form>
+                </div>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
